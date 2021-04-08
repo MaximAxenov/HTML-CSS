@@ -1,0 +1,107 @@
+.header {
+    position: relative;
+    background-color: $black-color;
+    
+    &__button__nav {
+        display: flex;
+        position: relative;
+    }
+    
+    &_navigation {
+        position: absolute;
+        width: 232px;
+        height: 764px; 
+        top: 170%;
+        margin-left: 130px;
+        background: $light-white-color;
+        display: none;
+    }
+
+
+    &__button{
+        background-color: $black-color;
+        fill: $light-white-сolor;
+    }
+    
+    &__button:hover &__burger,
+    &__button:focus &__burger{
+        fill: $dark-pink-color;
+    }
+
+    &__loupe{
+        background-color: $black-color;
+        fill: $light-white-color;
+    }
+    &__loupe:hover,
+    &__loupe:focus{
+        fill: $dark-pink-color;
+    }
+    
+    &__button:focus + &_navigation {
+        display: block;
+    }
+    
+    &_navigation:focus {
+        display: block;
+    }
+    
+    &__title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        margin: 37px 0 0 34px;
+    }
+    
+    &__navigation-list {
+        list-style: none;
+    }
+    
+    &__navigation-list > li {
+        margin-top: 24px;
+    }
+    
+    &__sub-navigation-list > li {
+        margin-top: 12px;
+        margin-left: 54px;
+    }
+    
+    &__sub-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    margin-left: 33px;
+    margin-top: 50px;
+    text-decoration: none;
+    color: $dark-pink-color;
+    }
+    
+    &__sub-navigation-link {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: $black-color;
+    }
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+    
+    &__logo {
+        margin: 0 42px 0 0;
+    }
+    
+    &__button {
+        background: transparent;
+        border: none;
+        margin: 0 33px 0 0;
+    }
+    
+    &__link {
+        margin: 0 33px 0 0;
+    }
+}
+
