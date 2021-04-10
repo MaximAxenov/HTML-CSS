@@ -20,7 +20,7 @@
 
     &__button{
         background-color: $black-color;
-        fill: $light-white-сolor;
+        fill: $light-white-color;
     }
     
     &__button:hover &__burger,
@@ -36,6 +36,27 @@
     &__loupe:focus{
         fill: $dark-pink-color;
     }
+
+    &__human{
+        background-color: $black-color;
+        fill: $light-white-color;
+    }
+    
+    &__human:hover,
+    &__human:focus{
+        fill: $dark-pink-color;
+    }
+    
+    &__basket__svg{
+        background-color: $black-color;
+        fill: $light-white-color;
+    }
+    
+    &__basket__svg:hover,
+    &__basket__svg:focus{
+        fill: $dark-pink-color;
+    }
+
     
     &__button:focus + &_navigation {
         display: block;
@@ -105,3 +126,20 @@
     }
 }
 
+@media (max-width: $desktop-width){
+    .header{
+        padding: 0 16px;
+    }
+}
+@media (max-width: $tablet-width){
+    .header{
+        padding: 0 16px;
+
+        &__link{
+            display: none;
+        }
+        &__basket{
+            display: none;
+        }
+    }
+}
