@@ -1,15 +1,15 @@
 .products {
     margin-top: 97px;
 
-    .products__item {
+    &__products__item {
         position: relative;
     }
 
-    .cart-wrapper-overlay:hover .button__basket__product{
+    &__cart-wrapper-overlay:hover &__button__basket__product{
         display: block;
     }
 
-    .button__basket__product {
+    &__button__basket__product {
         display: none;
         height: 43px;
         width: 138px;
@@ -22,57 +22,61 @@
         border: 1px solid $light-white-color;
     }
 
-    .goods__basket__svg{
+    &__goods__basket__svg{
         fill: $light-white-color;
         background: rgba(58, 56, 56, 0.86);
         margin-right: 13px; 
     }
 
-    .button__descripteon{
+    &__button__descripteon{
         display: flex;
     }
 
-    .add{
+    &__add{
         margin-top: 5px;
         vertical-align: middle;
     }
 
-    .overlay {
+    &__overlay {
         position: inherit;
         margin-top: -420px;
         height: 420px;
         width: 360px;
         background: rgba(58, 56, 56, 0.86);
+
+        @include min-mobile{
+            position: fixed;
+        }
     }
 
-    .cart-wrapper-overlay:hover {
+    &__cart-wrapper-overlay:hover {
         position: relative;
     }
 
-    .overlay::before {
+    &__overlay::before {
         position: absolute;
     }
 
 
-    .products__title {
+    &__title {
         font-size: 30px;
         font-weight: 400;
         line-height: 36px;
         text-align: center; 
     }
 
-    .products__text {
+    &__text {
         font-size: 14px;
         font-weight: 400;
         line-height: 17px; 
         text-align: center;
     }
 
-    .product__buttom {
+    &__product__buttom {
         display: none;
     }
 
-    .products__list {
+    &__list {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -85,7 +89,7 @@
         }
     }
 
-    .products__item {
+    &__item {
         width: 360px;
 
         @include min-mobile{
@@ -93,7 +97,7 @@
         }
     }
 
-    .product__img {
+    &__product__img {
         position: relative;
         display: block;
 
@@ -102,54 +106,53 @@
         }
     }
 
-    .product__descripteon {
+    &__product__descripteon {
         background-color: $gray-color;
         padding: 25px 29px 20px 17px;
     }
 
-    .product__title {
+    &__product__title {
         font-size: 13px;
         font-weight: 400;
         line-height: 16px;
         margin: 0 0 12px 0;
     }
 
-    .product__text {
+    &__product__text {
         font-size: 14px;
         font-weight: 300;
         line-height: 17px;
         margin: 0 0 18px 0;
     }
 
-    .product__price {
+    &__product__price {
         color: $dark-pink-color;
         font-size: 16px;
         font-weight: 400;
         line-height: 19px;
     }
 
-    .product {
+    &__product {
         margin: 0 0 30px;
-    }
-
-    .products_button {
-        position: relative;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 19px;
-        padding: 15px 39px;
-        color: $dark-pink-color;
-        display: flex;
-        margin: 0 auto;
-        border: solid 1px $dark-pink-color;
-        background: transparent;
-    }
-
-    .products_button:hover{
-        color: $light-white-color;
-        background-color: $dark-pink-color;
-        position: initial;
-        outline: solid 1px $dark-pink-color;
     }
 }
 
+.products_button {
+    position: relative;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    padding: 15px 39px;
+    color: $dark-pink-color;
+    display: flex;
+    margin: 0 auto;
+    border: solid 1px $dark-pink-color;
+    background: transparent;
+}
+
+.products_button:hover{
+    color: $light-white-color;
+    background-color: $dark-pink-color;
+    position: initial;
+    outline: solid 1px $dark-pink-color;
+}

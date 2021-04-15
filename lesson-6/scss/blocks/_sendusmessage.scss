@@ -4,9 +4,29 @@
     .registration__descripteon {
         display: flex;
 
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .reg__benefit {
             margin-top: 64px;
             margin-left: 128px;
+
+            @include tablet{
+                margin-left: 22px;
+            }
+            @include mobile{
+                margin-top: 0px;
+                margin-bottom: 100px;
+            }
         }
         
         .Your_Name {
@@ -24,6 +44,14 @@
             height: 44px;
             width: 358px;
             margin-bottom: 20px;
+
+            @include mobile{
+                width: 345px;
+            }
+
+            @include min-mobile{
+                width: 280px;
+            }
         }
         
         .from_reg_last {
@@ -34,6 +62,14 @@
             height: 44px;
             width: 358px;
             margin-bottom: 31px;
+
+            @include mobile{
+                width: 345px;
+            }
+
+            @include min-mobile{
+                width: 280px;
+            }
         }
         
         .gender-input {
@@ -66,6 +102,14 @@
             height: 44px;
             width: 358px;
             margin-bottom: 20px;
+
+            @include mobile{
+                width: 345px;
+            }
+
+            @include min-mobile{
+                width: 280px;
+            }
         }
         
         .from_reg_fassword {
@@ -76,6 +120,14 @@
             height: 44px;
             width: 358px;
             margin-bottom: 15px;
+
+            @include mobile{
+                width: 345px;
+            }
+
+            @include min-mobile{
+                width: 280px;
+            }
         }
         
         .from__text {
@@ -96,6 +148,10 @@
             color: $dark-pink-color;
             background-color:#E5E5E5;
             margin-bottom: 96px;
+
+            @include mobile{
+                margin-bottom: 40px;
+            }
         }
         .from__button:hover {
             position: initial;
@@ -107,6 +163,12 @@
             font-size: 24px;
             font-weight: 300;
             line-height: 29px;
+
+            @include tablet{
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 19px;
+            }
         }
         
         .title__benefit {
@@ -114,6 +176,19 @@
             font-weight: 300;
             line-height: 29px;
             margin-top: 22px;
+            width: 652px;
+
+            @include tablet{
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 19px;
+                width: 354px;
+                margin-top: 32px
+            }
+
+            @include min-mobile{
+                width: 290px
+            }
         }
         
         .item__benefit__first {
@@ -123,6 +198,12 @@
             line-height: 29px;
             margin-top: 21px;
             position: relative;
+
+            @include tablet{
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 19px;
+            }
         }
         
         .item__benefit {
@@ -132,6 +213,13 @@
             line-height: 29px;
             margin-top: 16px;
             position: relative;
+
+            @include tablet{
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 19px;
+                margin-top: 26px;
+            }
         }
         
         .list_benefit {
