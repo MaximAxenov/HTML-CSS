@@ -5,6 +5,7 @@
     &__button__nav {
         display: flex;
         position: relative;
+        right: 0;
     }
     
     &_navigation {
@@ -12,9 +13,18 @@
         width: 232px;
         height: 764px; 
         top: 170%;
-        margin-left: 130px;
+        right: -220px;
         background: $light-white-color;
         display: none;
+
+        @include tablet{
+            right: -40px;
+        }
+        @include mobile{
+            right: -22px;
+            top: 180%;
+            height: 700px;
+        }
     }
 
 
@@ -119,6 +129,10 @@
         background: transparent;
         border: none;
         margin: 0 33px 0 0;
+                
+        @include mobile{
+            margin: 0 0 0 0;
+        }
     }
     
     &__link {
