@@ -113,7 +113,7 @@
 
         @include min-mobile{
             width: 200px;
-            margin-left: 5px;
+            margin-left: 2px;
         }
     }
     
@@ -124,7 +124,6 @@
     }
     
     &__button {
-        margin-left: -4px;
         outline: none;
         border: solid 1px $dark-pink-color;
         background:#F4F4F4 70%;
@@ -142,11 +141,10 @@
     &__button:hover {
         color: $light-white-color;
         background-color: $dark-pink-color;
-        position: initial;
         outline: none;
     }
     
-    &__Subscribe {
+    &__subscribe-text {
         font-size: 14px;
         font-weight: 400;
         line-height: 17px;
@@ -169,6 +167,10 @@
             flex-direction: column-reverse;
             align-items: center;
         }
+        @include mobile{
+            flex-direction: column-reverse;
+            align-items: center;
+        }
     }
 
     &__rights__block {
@@ -179,6 +181,9 @@
         padding: 24px 0 24px 0;
 
         @include min-mobile{
+            padding: 43px 0 0 0;
+        }
+        @include mobile{
             padding: 43px 0 0 0;
         }
     }
@@ -238,4 +243,3 @@
         line-height: 19px;
     }
 }
-

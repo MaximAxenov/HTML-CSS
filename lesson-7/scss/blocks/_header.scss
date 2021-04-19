@@ -2,6 +2,43 @@
     position: relative;
     background-color: $black-color;
     
+    &__form{
+        display: none;
+        position: relative;
+        margin-left: 20px;
+
+        @include mobile{
+            margin-left: 10px;
+        }
+    }
+    
+    [type="search"]:hover, 
+    [type="search"]:focus{
+        box-shadow: 0 0 0 3px $dark-pink-color;
+    }
+    
+    &__icon{
+        display: flex;
+    }
+    &__search{
+        display: flex;
+    }
+    &__button-search:focus + .header__form,
+    &__button-search:hover + .header__form{
+        display: block;
+    }
+    &__form:focus,
+    .header__form:hover{
+        display: block;
+    }
+    &__search{
+        position: relative;
+    }
+    &__button-search{
+        border: none;
+        background: transparent;
+    }
+
     &__button__nav {
         display: flex;
         position: relative;
@@ -16,6 +53,7 @@
         right: -220px;
         background: $light-white-color;
         display: none;
+        box-shadow: 0 0 0 3500px rgba(0, 0, 0, 0.5);
 
         @include tablet{
             right: -40px;
@@ -68,11 +106,13 @@
     }
 
     
-    &__button:focus + &_navigation {
+    &__button:focus + &_navigation,
+    &__button:hover + &_navigation {
         display: block;
     }
     
-    &_navigation:focus {
+    &_navigation:focus,
+    &_navigation:hover{
         display: block;
     }
     
@@ -122,7 +162,11 @@
     }
     
     &__logo {
-        margin: 0 42px 0 0;
+        margin: -7px 42px 0 0;
+
+        @include mobile{
+            margin: -7px 30px 0 0;
+        }
     }
     
     &__button {
@@ -137,6 +181,47 @@
     
     &__link {
         margin: 0 33px 0 0;
+    }
+    &__mobile-nav{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    &__mobile-reg{
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: #F16D7F;
+        display: none;
+    
+        @include mobile{
+            display: block;
+        }
+    }
+    &__mobile-basket{
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: #F16D7F;
+        display: none;
+    
+        @include mobile{
+            display: block;
+        }
+    }
+    &__dash{
+        margin: 0 2px 2px 2px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: #F16D7F;
+        display: none;
+    
+        @include mobile{
+            display: block;
+        }
     }
 }
 
@@ -156,4 +241,27 @@
             display: none;
         }
     }
+}
+
+[type="search"] {
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline:none;
+    border-radius: 10px;
+
+    @include mobile{
+        width: 150px;
+    }
+    @include min-mobile{
+        width: 100px;
+    }
+}
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background: url(/img/Vector.svg);
+    margin-right: 5px;
 }
