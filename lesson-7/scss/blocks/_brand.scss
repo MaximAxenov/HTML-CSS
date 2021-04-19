@@ -21,6 +21,9 @@
         @include mobile {
             padding: 0 0 0 83px;
         }
+        @include min-mobile{
+            padding: 0 0 0 50px;
+        }
     }
     
     &__title {
